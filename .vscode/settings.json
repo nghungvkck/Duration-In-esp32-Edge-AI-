@@ -1,0 +1,10 @@
+{
+    "cmake.sourceDirectory": "/mnt/d/Hoc_tap_Sinh_Vien/Kien_thu_AI/Project/Duration_edge_ai/firmware",
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python.analysis.extraPaths": [
+        "./src/processing_data",
+        "./src/processing_data/core",
+        "./src/processing_data/core/features",
+    ]
+}
