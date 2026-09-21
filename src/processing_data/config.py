@@ -33,9 +33,9 @@ AUDIO_EXTENSIONS = ('.wav', '.mp3', '.m4a', '.flac', '.ogg')
 # ============================================================
 # SMOOTHER
 # ============================================================
-SMOOTH_GAUSSIAN_SIGMA = 0.5       # Gaussian filter sigma (denoise)
-SMOOTH_WINDOW_SEC = 0.02          # Savitzky-Golay window (seconds)
-SMOOTH_POLYORDER = 1              # Savitzky-Golay polyorder
+SMOOTH_GAUSSIAN_SIGMA = 0.0002       # Gaussian filter sigma (denoise)
+SMOOTH_WINDOW_SEC = 0.020         # Savitzky-Golay window (seconds)
+SMOOTH_POLYORDER =2              # Savitzky-Golay polyorder
 
 
 # ============================================================
@@ -48,8 +48,8 @@ PEAK_MIN_DISTANCE_SEC = 0.3       # min distance between peaks (seconds)
 # ============================================================
 # SEGMENTER
 # ============================================================
-SEGMENT_PRE_PEAK_SEC = 0.05       # seconds before peak
-SEGMENT_DURATION_SEC = 0.3        # total segment duration (seconds)
+SEGMENT_PRE_PEAK_SEC = 0.145   # seconds before peak
+SEGMENT_DURATION_SEC = 0.24        # total segment duration (seconds)
 
 
 # ============================================================

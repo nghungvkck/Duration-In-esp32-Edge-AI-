@@ -46,17 +46,17 @@ class Pipeline:
         segments = self.segmenter.segment_all(data, sr, peaks)
         print(f"  Segments: {len(segments)}")
         
-        # 5. Extract Mel
-        for i, seg in enumerate(segments):
-            mel_db = self.mel_extractor.extract(seg['data'], sr)
-            print(f"    [{i+1}] mel shape={mel_db.shape}")
+        # # 5. Extract Mel
+        # for i, seg in enumerate(segments):
+        #     mel_db = self.mel_extractor.extract(seg['data'], sr)
+        #     print(f"    [{i+1}] mel shape={mel_db.shape}")
         
-        return {
-            'filepath': filepath,
-            'sample_rate': sr,
-            'n_peaks': len(peaks),
-            'n_segments': len(segments),
-        }
+        # return {
+        #     'filepath': filepath,
+        #     'sample_rate': sr,
+        #     'n_peaks': len(peaks),
+        #     'n_segments': len(segments),
+        # }
 
 
 if __name__ == "__main__":
