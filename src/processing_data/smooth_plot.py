@@ -24,7 +24,7 @@ from core.smoother import Smoother
 from core.peak_detector import PeakDetector
 from core.segmenter import Segmenter
 
-from config.config import (
+from  config.config_processing_data import (
     PEAK_THRESHOLD_RATIO,
     SEGMENT_PRE_PEAK_SEC,
     SEGMENT_DURATION_SEC,
