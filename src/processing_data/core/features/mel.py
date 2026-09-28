@@ -8,12 +8,12 @@ from pathlib import Path
 import numpy as np
 import librosa
 
-# Add processing_data/ to sys.path
-_processing_dir = Path(__file__).parent.parent.parent
-if str(_processing_dir) not in sys.path:
-    sys.path.insert(0, str(_processing_dir))
+# feature -> core -> processing_data -> src -> config
+_root_dir = Path(__file__).parent.parent.parent.parent.parent
+if str(_root_dir) not in sys.path:
+    sys.path.insert(0, str(_root_dir))
 
-from config import (
+from config.config_processing_data import (
     MEL_N_MELS,
     MEL_N_FFT,
     MEL_HOP_LENGTH,

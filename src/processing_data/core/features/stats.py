@@ -12,7 +12,7 @@ _processing_dir = Path(__file__).parent.parent.parent
 if str(_processing_dir) not in sys.path:
     sys.path.insert(0, str(_processing_dir))
 
-from config import STATS_FRAME_LENGTH, STATS_HOP_LENGTH
+from config.config import STATS_FRAME_LENGTH, STATS_HOP_LENGTH
 
 
 class StatsExtractor:

@@ -1,7 +1,6 @@
 """
-AUDIO LOADER
-=============
-Load audio files.
+file load audio from computer
+định dangtj wav, mp3, m4a, flac, ogg
 """
 import librosa
 from pathlib import Path
@@ -31,17 +30,17 @@ class AudioLoader:
         return sorted(files)
 
 
-if __name__ == "__main__":
-    import os
-    project_root = Path(__file__).parent.parent.parent.parent
-    os.chdir(project_root)
+# if __name__ == "__main__":
+#     import os
+#     project_root = Path(__file__).parent.parent.parent.parent
+#     os.chdir(project_root)
     
-    loader = AudioLoader()
-    files = loader.get_files('data/raw_data/dau_nhua/v1c1')
-    print(f"Found {len(files)} files")
+#     loader = AudioLoader()
+#     files = loader.get_files('data/raw_data/dau_nhua/v1c1')
+#     print(f"Found {len(files)} files")
     
-    if files:
-        data, sr = loader.load(files[0])
-        print(f"Loaded: {Path(files[0]).name}")
-        print(f"SR: {sr}")
-        print(f"Duration: {len(data)/sr:.2f}s")
+#     if files:
+#         data, sr = loader.load(files[0])
+#         print(f"Loaded: {Path(files[0]).name}")
+#         print(f"SR: {sr}")
+#         print(f"Duration: {len(data)/sr:.2f}s")

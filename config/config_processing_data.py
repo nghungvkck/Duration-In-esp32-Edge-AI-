@@ -1,5 +1,6 @@
 """
 config.py: Configuration for processing_data module.
+processing raw data
 """
 from pathlib import Path
 
@@ -33,8 +34,8 @@ AUDIO_EXTENSIONS = ('.wav', '.mp3', '.m4a', '.flac', '.ogg')
 # ============================================================
 # SMOOTHER
 # ============================================================
-SMOOTH_GAUSSIAN_SIGMA = 0.0002       # Gaussian filter sigma (denoise)
-SMOOTH_WINDOW_SEC = 0.020         # Savitzky-Golay window (seconds)
+SMOOTH_GAUSSIAN_SIGMA = 0.0001      # Gaussian filter sigma (denoise)
+SMOOTH_WINDOW_SEC = 0.0001       # Savitzky-Golay window (seconds)
 SMOOTH_POLYORDER =2              # Savitzky-Golay polyorder
 
 

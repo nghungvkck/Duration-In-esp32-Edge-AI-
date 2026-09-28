@@ -7,11 +7,12 @@ import sys
 from pathlib import Path
 import numpy as np
 
-_processing_dir = Path(__file__).parent.parent
-if str(_processing_dir) not in sys.path:
-    sys.path.insert(0, str(_processing_dir))
+# core -> processing_data -> src -> config
+_root_dir = Path(__file__).parent.parent.parent.parent
+if str(_root_dir) not in sys.path:
+    sys.path.insert(0, str(_root_dir))
 
-from config import (
+from config.config_processing_data import (
     SEGMENT_PRE_PEAK_SEC,
     SEGMENT_DURATION_SEC,
 )
@@ -56,10 +57,10 @@ if __name__ == "__main__":
     project_root = Path(__file__).parent.parent.parent.parent
     os.chdir(project_root)
     
-    from core.audio_loader import AudioLoader
-    from core.smoother import Smoother
-    from core.peak_detector import PeakDetector
-    from core.segmenter import Segmenter
+    from audio_loader import AudioLoader
+    from smoother import Smoother
+    from peak_detector import PeakDetector
+    from segmenter import Segmenter
     
     loader = AudioLoader()
     smoother = Smoother()
